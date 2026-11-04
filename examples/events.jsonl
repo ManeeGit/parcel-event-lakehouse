@@ -1,0 +1,5 @@
+{"event_id":"example-created","parcel_id":"example-parcel","status":"created","event_time":"2026-01-01T00:00:00Z","hub":"north","schema_version":1}
+{"event_id":"example-delivered","parcel_id":"example-parcel","status":"delivered","event_time":"2026-01-01T03:00:00Z","hub":"south","schema_version":2,"service_level":"express"}
+{"event_id":"example-transit","parcel_id":"example-parcel","status":"in_transit","event_time":"2026-01-01T01:00:00Z","hub":"north","schema_version":1}
+{"event_id":"example-created","parcel_id":"example-parcel","status":"created","event_time":"2026-01-01T00:00:00Z","hub":"north","schema_version":1}
+{"intentionally_broken":

@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parcel-event-lakehouse"
+version = "1.0.0"
+description = "A local transactional outbox and real Iceberg lakehouse with crash recovery labs"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "pyiceberg[sql-sqlite,pyarrow]==0.10.0",
+  "pyarrow==21.0.0",
+  "duckdb==1.4.1",
+  "pytz==2025.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.2", "ruff==0.14.3"]
+
+[project.scripts]
+parcel-lakehouse = "parcel_lakehouse.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
